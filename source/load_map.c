@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   load_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
+/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 12:20:08 by subpark           #+#    #+#             */
-/*   Updated: 2023/08/21 15:04:06 by subpark          ###   ########.fr       */
+/*   Updated: 2025/05/05 16:39:06 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	count_lines(int fd)
 
 	lines = 0;
 	tmp = get_next_line(fd);
-	while (tmp > 0)
+	while (tmp != NULL)
 	{
 		free(tmp);
 		lines ++;

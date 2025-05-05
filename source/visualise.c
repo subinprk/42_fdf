@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   visualise.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
+/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 23:18:50 by siun              #+#    #+#             */
-/*   Updated: 2023/08/21 15:18:57 by subpark          ###   ########.fr       */
+/*   Updated: 2025/05/05 16:39:38 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int argc, char **argv)
 	float			**map;
 	t_vars			vars;
 	static t_print	print;
-	int				height;
+	// int				height;
 
 	if (argc != 2)
 		return (0);
@@ -71,7 +71,7 @@ int	main(int argc, char **argv)
 	vars.addr = mlx_get_data_addr(vars.img, &vars.bits_per_pixel,
 			&vars.line_length, &vars.endian);
 	make_distanced(&map, print.x, print.y);
-	height = max_z(map);
+	// height = max_z(map);
 	print_out(map, vars, argv[1]);
 	mlx_put_image_to_window(vars.mlx, vars.win, vars.img, 0, 0);
 	mlx_hook(vars.win, 2, 1, &manage_key_hook, &vars);

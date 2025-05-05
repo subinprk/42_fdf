@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   modify_arr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
+/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 13:27:37 by subpark           #+#    #+#             */
-/*   Updated: 2023/08/09 18:11:43 by subpark          ###   ########.fr       */
+/*   Updated: 2025/05/05 16:39:57 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ float	modify_distance(float	**map)
 	float	size;
 	int		max_x;
 	int		max_y;
-	int		i;
+	// int		i;
 
 	max_x = find_max_x(map);
 	max_y = find_max_y(map);
 	size = 0.1;
-	i = 0;
+	// i = 0;
 	while (map[max_x][0] * size < IMG_WIDTH - 100 && map[max_y][1]
 		* size < IMG_HEIGHT - 100)
 		size = size * 1.5;
